@@ -24,4 +24,16 @@ if (message.content.startsWith('credit')){
     }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'c') {
+    msg.reply('#credit');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === '1') {
+    msg.reply('#daily');
+  }
+});
+
 client.login(process.env.BOT_TOKEN); 
