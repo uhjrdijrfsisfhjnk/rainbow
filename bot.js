@@ -14,26 +14,17 @@ var channel = "492852383089426433";
     },305);
 })
 
-client.on('message', message => {
-if (message.content.startsWith('credit')){
-     let ra3d = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("random")
-  .setDescription("#credit")
+         client.on('message', message = {
+            if (message.content === 'c') {
+              message.channel.send('#credit');
 
-    }
+            }
 });
+         client.on('message', message = {
+            if (message.content === 'd') {
+              message.channel.send('#daily');
 
-client.on('message', msg => {
-  if (msg.content === 'c') {
-    msg.reply('#credit');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === '1') {
-    msg.reply('#daily');
-  }
+            }
 });
 
 client.login(process.env.BOT_TOKEN); 
