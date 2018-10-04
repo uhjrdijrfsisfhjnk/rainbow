@@ -14,17 +14,4 @@ var channel = "492852383089426433";
     },305);
 })
 
-         client.on('message', message = {
-            if (message.content === 'c') {
-              message.channel.send('#credit');
-
-            }
-});
-         client.on('message', message = {
-            if (message.content === 'd') {
-              message.channel.send('#daily');
-
-            }
-});
-
 client.login(process.env.BOT_TOKEN); 
