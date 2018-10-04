@@ -14,12 +14,12 @@ var channel = "497499970686156810";
     },305);
 })
 
-      if(message.content ===("c")){
-          message.channel.send('#credit');
-          }
+if(message.content ===("c")){
+      message.channel.send('#credit');
+}
 
-      if(message.content ===("d")){
-          message.channel.send('#daily');
-          }
+if(message.content ===("d")){
+      message.channel.send('#daily');
+}
 
 client.login(process.env.BOT_TOKEN); 
