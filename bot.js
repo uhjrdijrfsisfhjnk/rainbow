@@ -14,9 +14,10 @@ var channel = "497499970686156810";
     },305);
 })
 
-client.on('message', message = {
+         client.on('message', message => {
             if (message.content === 'السلام عليكم') {
-              message.reply('و عليكم السلام');
+              message.channel.send('و عليكم السلام');
             }
 });
+
 client.login(process.env.BOT_TOKEN); 
