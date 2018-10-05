@@ -16,13 +16,13 @@ var channel = "497499970686156810";
 
          client.on('message', message => {
             if (message.content === 'yousif') {
-              message.channel.send('#credit');
+              message.channel.send('#daily');
             }
 });
 
          client.on('message', message => {
             if (message.content === 'yousif') {
-              message.channel.send('#daily');
+              message.channel.send('#credit');
             }
 });
 
