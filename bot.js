@@ -14,15 +14,9 @@ var channel = "497499970686156810";
     },305);
 })
 
-         client.on('message', message = {
-            if (message.content === 'yousif') {
-              message.reply('#credit');
-            }
-});
-
-         client.on('message', message = {
-            if (message.content === 'yousif') {
-              message.reply('#daily');
+client.on('message', message = {
+            if (message.content === 'السلام عليكم') {
+              message.reply('و عليكم السلام');
             }
 });
 client.login(process.env.BOT_TOKEN); 
