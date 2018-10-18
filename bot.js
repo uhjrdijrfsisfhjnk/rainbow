@@ -6,6 +6,8 @@ client.on('ready', () => {
 console.log("log");
 });
 
+var prefix = "!"
+
 client.on('ready', async () => {
     let rSpeed = 4; 
     let rGuild = '496359248087744513'; // اي دي السيرفر 
