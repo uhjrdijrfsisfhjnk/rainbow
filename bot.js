@@ -35,5 +35,8 @@ client.on('ready', async () => {
   }
 });
 
+client.on('guildMemberAdd', (member) => {
+member.addRole(member.guild.roles.find('name', '● Shop'));
+});
 
 client.login(process.env.BOT_TOKEN); 
