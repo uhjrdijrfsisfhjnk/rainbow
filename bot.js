@@ -8,6 +8,7 @@ console.log("log");
 
 var prefix = "!"
 
+client.on('unhandledRejection', (err) => console.log(err))
 client.on('ready', async () => {
     let rSpeed = 4; 
     let rGuild = '495305349499453450'; // اي دي السيرفر 
