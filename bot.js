@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
+const moment = require("moment");
 
 client.on('ready', () => {
  console.log("welcome bot"); 
@@ -43,7 +43,7 @@ client.on('guildMemberAdd', (member) => {
 member.addRole(member.guild.roles.find('name', '● Members'));
 });
 
-const moment = require("moment")
+
 client.on("guildMemberAdd", m => {
         let room = m.guild.channels.find(a => a.name === 'chat'); //
     if (datediff(parseDate(moment(m.user.createdTimestamp).format('l')), parseDate(moment().format('l'))) < 8) {
