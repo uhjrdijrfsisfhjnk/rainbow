@@ -1,9 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on("error", (e) => console.error(e));
-
-client.on("warn", (e) => console.warn(e));
 
 client.on('ready', () => {
  console.log("welcome bot"); 
@@ -46,5 +43,8 @@ client.on('guildMemberAdd', (member) => {
 member.addRole(member.guild.roles.find('name', '● Members'));
 });
 
+client.on("error", console.error)
+
+client.on("warn", console.warn);
 
 client.login(process.env.BOT_TOKEN); 
