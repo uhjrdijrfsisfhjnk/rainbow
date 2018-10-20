@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+client.on("error", (e) => console.error(e));
+
+client.on("warn", (e) => console.warn(e));
+
 client.on('ready', () => {
  console.log("welcome bot"); 
 console.log("log");
@@ -8,7 +12,7 @@ console.log("log");
 
 var prefix = "!"
 
-client.on('unhandledRejection', (err) => console.log(err))
+
 client.on('ready', async () => {
     let rSpeed = 4; 
     let rGuild = '495305349499453450'; // اي دي السيرفر 
