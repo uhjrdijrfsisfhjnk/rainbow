@@ -43,6 +43,24 @@ client.on('guildMemberAdd', (member) => {
 member.addRole(member.guild.roles.find('name', '● Members'));
 });
 
+const moment = require("moment")
+client.on("guildMemberAdd", m => {
+        let room = m.guild.channels.find(a => a.name === 'chat'); //
+    if (datediff(parseDate(moment(m.user.createdTimestamp).format('l')), parseDate(moment().format('l'))) < 8) {
+        m.ban() .then((
+            room.send(`**:no_entry: | ${m} Has been banned for: \`fake\`**`)
+        ));
+    };
+    function parseDate(str) {
+        var mdy = str.split('/');
+        return new Date(mdy[2], mdy[0]-1, mdy[1]);
+    };
+    
+    function datediff(first, second) {
+        return Math.round((second-first)/(1000*60*60*24));
+    };
+});
+
 client.on("error", console.error)
 
 client.on("warn", console.warn);
