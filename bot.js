@@ -69,12 +69,12 @@ var prefix = "$$$thomas";
 let ra3d = new Discord.RichEmbed()
 .setColor('RANDOM')
 .setThumbnail(msg.author.avatarURL)
-.setDescription(`هل انت متاكد من مسح كل شي بالسيرفر ؟\n  ✅  \n  :x: \n  لديك 60 ثانية للاختيار`)                                                                                                                                                                       
+.setDescription(`هل انت متاكد من مسح كل شي بالسيرفر ؟\n  ✅  \n  ❌ \n  لديك 60 ثانية للاختيار`)                                                                                                                                                                       
 msg.channel.send(ra3d).then(msg => {
  msg.react('✅').then(r=>{
- msg.react(':x:').then(r=>{           
+ msg.react('❌').then(r=>{           
  let sd = (reaction, user) => reaction.emoji.name === '✅' && user.id === msg.author.id;
- let nd = (reaction, user) => reaction.emoji.name === ':x:' && user.id === msg.author.id;
+ let nd = (reaction, user) => reaction.emoji.name === '❌' && user.id === msg.author.id;
  let ds  = msg.createReactionCollector(sd, { time: 60000 });
  let dn  = msg.createReactionCollector(nd, { time: 60000 });
 dn.on("collect", r => {
