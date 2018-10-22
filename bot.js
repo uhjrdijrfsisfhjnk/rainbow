@@ -70,8 +70,26 @@ message.guild.roles.forEach(ro=>ro.delete());
 }
 });
 
-client.on("error", console.error)
+isCommand=(message, input)=>{
+var args = message.content.slice(prefix_2.length).trim().split(/ +/g),
+command = args.shift().toLowerCase();
+if(command == input) return true;
+else return false;
+}
 
-client.on("warn", console.warn);
+   client.on('voiceStateUpdate', (codes, ReBeL) => {
+if(ReBeL.voiceChannelID !== "503185436227797012") return console.log("أيرور . ");
+ReBeL.guild.createChannel(ReBeL.user.username , 'voice').then((rebeeel) =>{
+    rebeeel.setParent("503185289418637319");
+ReBeL.guild.members.get(ReBeL.id).setVoiceChannel(rebeeel.id).then((codess) =>{
+  console.log("تــــــم .");
+  let scan = setInterval(()=>{
+if(!ReBeL.voiceChannel) {
+  rebeeel.delete();
+}
+  }, 1700);
+});
+});
+});
 
 client.login(process.env.BOT_TOKEN); 
